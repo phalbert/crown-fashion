@@ -2,6 +2,7 @@
   "name": "crown-fashion",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://phalbert.github.com/crown-fashion",
   "dependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -11,7 +12,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean": "docker stop $(docker ps -q --filter ancestor=$npm_package_name:$npm_package_version )",
+    "docker": "DOCKER_BUILDKIT=1 docker build -t $npm_package_name:$npm_package_version .",
+    "postdocker": "docker run -d -p 3000:3000 -v ${PWD}:/app -v /app/node_modules --name $npm_package_name $npm_package_name:$npm_package_version",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
