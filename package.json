@@ -2,7 +2,7 @@
   "name": "crown-fashion",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://phalbert.github.com/crown-fashion",
+  "homepage": "https://phalbert.github.com/crown-attires",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "node-sass": "^4.13.0",
