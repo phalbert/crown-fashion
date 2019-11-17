@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://phalbert.github.com/crown-attires",
   "dependencies": {
+    "firebase": "^7.4.0",
     "gh-pages": "^2.1.1",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
@@ -16,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "docker stop $(docker ps -q --filter ancestor=$npm_package_name:$npm_package_version )",
+    "clean": "docker stop $(docker ps -q --filter ancestor=$npm_package_name:$npm_package_version) && docker rm $npm_package_name",
     "docker": "DOCKER_BUILDKIT=1 docker build -t $npm_package_name:$npm_package_version .",
     "postdocker": "docker run -d -p 3000:3000 -v ${PWD}:/app -v /app/node_modules --name $npm_package_name $npm_package_name:$npm_package_version",
     "predeploy": "yarn build",
