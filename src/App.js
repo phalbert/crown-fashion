@@ -6,6 +6,7 @@ import Home from './pages/home/home.component';
 import Shop from './pages/shop/shop.component';
 import Auth from './pages/auth/auth.component'
 import Header from './components/header/header.component';
+
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 class App extends React.Component {
