@@ -25,11 +25,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "docker stop $(docker ps -q --filter ancestor=$npm_package_name:$npm_package_version) && docker rm $npm_package_name",
-    "docker": "DOCKER_BUILDKIT=1 docker build -t $npm_package_name:$npm_package_version -f Dockerfile.dev .",
-    "postdocker": "docker run -d -p 3000:3000 -v ${PWD}:/app -v /app/node_modules --name $npm_package_name $npm_package_name:$npm_package_version",
+    "clean": "docker stop $(docker ps -q --filter ancestor=$npm_package_name:dev) && docker rm $npm_package_name",
+    "docker": "DOCKER_BUILDKIT=1 docker build -t $npm_package_name:dev -f Dockerfile.dev .",
+    "postdocker": "docker run -d -p 3000:3000 -v ${PWD}:/app -v /app/node_modules --name $npm_package_name $npm_package_name:dev",
     "predeploy": "heroku container:push web -a react-fashion",
-    "deploy": "heroku container:release web -a react-fashion && heroku open"
+    "deploy": "heroku container:release web -a react-fashion && heroku open",
+    "docker:prod": "DOCKER_BUILDKIT=1 docker build -t $npm_package_name:$npm_package_version ."
   },
   "eslintConfig": {
     "extends": "react-app"
