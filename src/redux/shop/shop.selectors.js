@@ -9,7 +9,12 @@ export const selectShopCollections = createSelector(
 
 export const selectCollection = collectionRoute => createSelector(
     [selectShopCollections],
-    collections => collections.find(
-        collection => collection.routeName === collectionRoute
+    collections => collections[collectionRoute]
+)
+
+export const selectCollectionsForPreview = createSelector(
+    [selectShopCollections],
+    collections => Object.keys(collections).map(
+        key => collections[key]
     )
 )
