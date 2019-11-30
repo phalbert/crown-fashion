@@ -2,7 +2,6 @@
   "name": "crown-fashion",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://phalbert.github.com/crown-fashion",
   "dependencies": {
     "cogo-toast": "^4.1.1",
     "firebase": "^7.4.0",
