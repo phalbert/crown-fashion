@@ -36,7 +36,7 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host: crown-fashion.localhost
+  - host: crown-fashion.localtest.me
     http:
       paths:
       - path: /

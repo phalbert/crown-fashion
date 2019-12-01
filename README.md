@@ -1,5 +1,22 @@
 A full ecommerce app to learn react
 
+
+## Available Scripts when using docker
+
+Make sure you have docker installed
+
+### `yarn docker`
+
+Builds the docker image and runs a container from it
+
+### `yarn clean`
+
+Stops and removes the container
+
+### `yarn docker:prod`
+
+Builds a production ready image
+
 ## Available Scripts
 
 In the project directory, you can run:
