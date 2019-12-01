@@ -1,11 +1,11 @@
 import React from 'react'
 import DirectoryMenu from '../../components/directory-menu/directory-menu.component'
-import './home.styles.scss'
+import { HomePageContainer } from './home.styles'
 
 const Home = () => (
-    <div className='home'>
+    <HomePageContainer>
         <DirectoryMenu />
-    </div>
+    </HomePageContainer>
 )
 
 export default Home
