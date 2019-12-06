@@ -23,6 +23,8 @@ class Shop extends React.Component {
     componentDidMount() {
         const { updateCollections } = this.props
         const collectionRef = firestore.collection('collections')
+
+        // reactive programming listen to stream of data
         collectionRef.onSnapshot(async snapshot => {
             const collectionsMap = convertCollectionsSnapshotToMap(snapshot)
             updateCollections(collectionsMap)
