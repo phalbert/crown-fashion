@@ -18,3 +18,8 @@ export const selectCollectionsForPreview = createSelector(
         key => collections[key]
     ) : []
 )
+
+export const selectIsCollectionFetching = createSelector(
+    [selectShop],
+    shop => shop.isFetching 
+)
