@@ -1,5 +1,23 @@
 A full ecommerce app to learn react
 
+## Adding environment variables
+
+You have to install `npm install env-cmd`
+
+Make `.env` in the root directory and update like this & `REACT_APP_` is the compulsory prefix for the variable name.
+```sh
+REACT_APP_NODE_ENV="production"
+REACT_APP_DB="http://localhost:5000"
+```
+Update package.json
+```javascript
+  "scripts": {
+    "start": "env-cmd react-scripts start",
+    "build": "env-cmd react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
+```
 
 ## Available Scripts when using docker
 

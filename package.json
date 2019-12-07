@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "cogo-toast": "^4.1.1",
+    "env-cmd": "^10.0.1",
     "firebase": "^7.4.0",
     "gh-pages": "^2.1.1",
     "mobiscroll": "^3.0.0-beta6",
@@ -23,8 +24,8 @@
     "toasted-notes": "^3.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "env-cmd react-scripts start",
+    "build": "env-cmd react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "docker stop $(docker ps -q --filter ancestor=$npm_package_name:dev) && docker rm $npm_package_name",
