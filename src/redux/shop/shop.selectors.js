@@ -23,3 +23,10 @@ export const selectIsCollectionFetching = createSelector(
     [selectShop],
     shop => shop.isFetching 
 )
+
+export const selectIsCollectionLoaded = createSelector(
+    [selectShop],
+    // coerce collections to a boolean hence if null, it will be false
+    // since null is falsey otherwise it will be true
+    shop => !!shop.collections 
+)

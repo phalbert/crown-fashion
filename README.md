@@ -1,5 +1,7 @@
 A full ecommerce app to learn react
 
+[Nuggets](nuggets.md)
+
 ## Adding environment variables
 
 The `.env.sample` contains all the variables you need for this project to run
@@ -28,6 +30,21 @@ Stops and removes the container
 ### `yarn docker:prod`
 
 Builds a production ready image
+
+## Deploy to heroku
+
+### Install heroku and login
+
+- Follow this [installation guide](https://devcenter.heroku.com/articles/heroku-cli)
+
+- `heroku login`
+
+### Build image and deploy
+
+`yarn deploy`
+
+The above is a script that builds the image and deploys to heroku
+
 
 ## Available Scripts
 
