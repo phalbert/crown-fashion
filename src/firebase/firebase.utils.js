@@ -69,7 +69,6 @@ export const convertCollectionsSnapshotToMap = collections => {
     }, {});
 }
 
-console.log(config)
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();
