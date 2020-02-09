@@ -6,7 +6,7 @@ import CollectionOverview from "../../components/collection-overview/collection-
 import Collection from '../collection/collection.component'
 import WithSpinner from '../../components/with-spinner/with-spinner.component'
 
-import { fetchCollectionsAsync } from '../../redux/shop/shop.actions'
+import { fetchCollectionsStart } from '../../redux/shop/shop.actions'
 import { createStructuredSelector } from "reselect";
 import { selectIsCollectionFetching, selectIsCollectionLoaded } from "../../redux/shop/shop.selectors";
 
@@ -46,7 +46,7 @@ const mapStateToProps = createStructuredSelector({
 })
 
 const mapDispatchToProps = dispatch => ({
-    fetchCollectionsAsync: () => dispatch(fetchCollectionsAsync())
+    fetchCollectionsAsync: () => dispatch(fetchCollectionsStart())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Shop)
