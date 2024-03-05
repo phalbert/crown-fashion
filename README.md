@@ -7,6 +7,7 @@ A full ecommerce app to learn react
 The `.env.sample` contains all the variables you need for this project to run
 
 Make `.env` in the root directory and update like this & `REACT_APP_` is the compulsory prefix for the variable name.
+
 ```sh
 REACT_APP_NODE_ENV="production"
 REACT_APP_DB="http://localhost:5000"
